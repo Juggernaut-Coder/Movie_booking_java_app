@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.Controller">
+   <children>
+      <AnchorPane fx:id="login_anchr" layoutX="163.0" layoutY="140.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="minimize" layoutX="542.0" mnemonicParsing="false" onAction="#minimize" AnchorPane.leftAnchor="542.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <FontAwesomeIcon glyphName="MINUS" size="1.2em" />
+               </graphic>
+            </Button>
+            <Button fx:id="close" layoutX="538.0" layoutY="12.0" mnemonicParsing="false" onAction="#exit" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <FontAwesomeIcon glyphName="CLOSE" size="1.2em" />
+               </graphic>
+            </Button>
+            <FontAwesomeIcon glyphName="USER" layoutX="261.0" layoutY="156.0" size="100" />
+            <Label layoutX="242.0" layoutY="170.0" text="Sign In">
+               <font>
+                  <Font name="Ubuntu Bold" size="36.0" />
+               </font>
+            </Label>
+            <TextField fx:id="input_username" layoutX="185.0" layoutY="227.0" prefHeight="24.0" prefWidth="230.0" promptText="Username">
+               <font>
+                  <Font name="Ubuntu" size="13.0" />
+               </font></TextField>
+            <TextField fx:id="input_password" layoutX="185.0" layoutY="267.0" onAction="#login" prefHeight="24.0" prefWidth="230.0" promptText="Password" />
+            <Button fx:id="login" layoutX="264.0" layoutY="299.0" mnemonicParsing="false" onAction="#login" text="Login">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Hyperlink fx:id="new_user_hyperlink" layoutX="423.0" layoutY="369.0" onAction="#switch_page" text="New user? Register" />
+            <ImageView blendMode="COLOR_BURN" fitHeight="201.0" fitWidth="221.0" focusTraversable="true" layoutX="14.0" layoutY="-30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/cinema-ticket-icon-outline-style-vector.jpg" />
+               </image>
+            </ImageView>
+            <ImageView blendMode="COLOR_BURN" fitHeight="50.0" fitWidth="50.0" layoutX="75.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/shopping-cart-icon-illustration-free-vector.jpg" />
+               </image>
+               <effect>
+                  <Blend />
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="signup_anchr" prefHeight="400.0" prefWidth="600.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="minimize1" layoutX="538.0" layoutY="14.0" mnemonicParsing="false" onAction="#minimize" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <FontAwesomeIcon glyphName="MINUS" size="1.2em" />
+               </graphic>
+            </Button>
+            <Text layoutX="232.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SignUp form">
+               <font>
+                  <Font name="Ubuntu" size="24.0" />
+               </font>
+            </Text>
+            <TextField fx:id="name" layoutX="215.0" layoutY="57.0" promptText="Name" AnchorPane.leftAnchor="215.0" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="57.0" />
+            <TextField fx:id="email" layoutX="215.0" layoutY="92.0" prefWidth="180.0" promptText="Email" AnchorPane.leftAnchor="215.0" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="114.0" />
+            <TextField fx:id="phone" layoutX="215.0" layoutY="164.0" promptText="Phone" AnchorPane.leftAnchor="215.0" AnchorPane.topAnchor="171.0" />
+            <TextField fx:id="signup_username" layoutX="215.0" layoutY="209.0" promptText="Username" AnchorPane.leftAnchor="215.0" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="228.0" />
+            <TextField fx:id="signup_password" layoutX="208.0" layoutY="293.0" onAction="#signup_action" promptText="Password" AnchorPane.leftAnchor="215.0" AnchorPane.rightAnchor="221.0" AnchorPane.topAnchor="285.0" />
+            <FontAwesomeIcon fill="#9e0505" glyphName="USER_PLUS" layoutX="52.0" layoutY="143.0" size="100" />
+            <Button fx:id="signup_btn" layoutX="246.0" layoutY="325.0" mnemonicParsing="false" onAction="#signup_action" prefHeight="43.0" prefWidth="102.0" text="SignUp" />
+            <Hyperlink fx:id="old_user_hyperlink" layoutX="392.0" layoutY="368.0" onAction="#switch_page" text="Already a member? SignIn" />
+            <Button fx:id="close1" layoutX="569.0" layoutY="2.0" mnemonicParsing="false" onAction="#exit" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <FontAwesomeIcon glyphName="CLOSE" size="1.2em" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
