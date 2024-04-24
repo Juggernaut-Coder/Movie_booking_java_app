@@ -1,3 +1,7 @@
+# Description:
+
+## MySQL Schema:
+
 CREATE DATABASE movie_booking;
 USE movie_booking;
 CREATE TABLE booking_login (
