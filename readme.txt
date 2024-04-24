@@ -2,6 +2,7 @@
 
 ## MySQL Schema
 
+```
 CREATE DATABASE movie_booking;
 USE movie_booking;
 CREATE TABLE booking_login (
@@ -28,7 +29,9 @@ CREATE TABLE reservedSeat (
 	seatID INT,
 	cutomerID INT
 );
-
+``
 ## To  compile:
 Ensure you have all dependencies installed -> MySQL (Create Schema), Java SDK, JavaFx
+```
 run ./comp_run.sh with proper arguments. (Check sh file for more details)
+```
