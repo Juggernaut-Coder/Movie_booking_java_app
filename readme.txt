@@ -29,7 +29,7 @@ CREATE TABLE reservedSeat (
 	seatID INT,
 	cutomerID INT
 );
-``
+```
 ## To  compile:
 Ensure you have all dependencies installed -> MySQL (Create Schema), Java SDK, JavaFx
 ```
