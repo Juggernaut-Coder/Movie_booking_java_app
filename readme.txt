@@ -1,6 +1,6 @@
-# Description:
+# Description
 
-## MySQL Schema:
+## MySQL Schema
 
 CREATE DATABASE movie_booking;
 USE movie_booking;
